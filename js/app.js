@@ -7,7 +7,7 @@ $(document).on('click', '#checkAvail', function() {
 	$('#checkAvail').toggleClass('.hidden');
 })
 
-var fullPrice = (rentalPrice + 125)*1.15;
+
 var rentalPrice = 0
 // var extraGuests = this.form.numGuests.value
 
@@ -34,17 +34,15 @@ function getQuote(form) {
 	// console.log(fullDate);
 	var firstDay = fullDate.getDay();
 	console.log("Day of the week is " + firstDay);
-	// var startDay = firstDay(this.form);
 	var d1 = new Date (form.checkIn.value);
 	var d2 = new Date (form.checkOut.value);
 	var numDays = (d2 - d1)/(60*24*60*1000);
 	console.log("The stay is " + numDays + " nights");
-	// var stayLength = numDays;
 	// console.log("stayLength is" + stayLength);
 	// console.log(firstDay);
 	// console.log(typeof(firstDay));
 	for(i = firstDay; i <= numDays+firstDay-1; i++) {
-		if(i % 6 === 0 || i % 5 === 0) {
+		if(i != 0 && i % 6 === 0 || i % 5 === 0) {
 			rentalPrice = rentalPrice + 10
 			// console.log(rentalPrice)
 		}
@@ -54,4 +52,8 @@ function getQuote(form) {
 		}
 		console.log("Rental Price is " + rentalPrice);
 	}
+	var fullPrice = (rentalPrice + 125)*1.15;
+	console.log("The full price is $" + fullPrice.toFixed(2));
+	$('.button').after('<p>The full price is $' + fullPrice.toFixed(2) + '</p>');
+	
 }
