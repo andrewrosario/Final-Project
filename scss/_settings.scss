@@ -1439,3 +1439,7 @@ $body-bg: red;
 // $include-table-visibility-classes: true;
 // $include-legacy-visibility-classes: true;
 // $include-accessibility-classes: true;
+
+.hidden {
+	display: none;
+}

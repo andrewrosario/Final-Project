@@ -3,5 +3,9 @@
 $(document).foundation();
 
 
+$(document).on('click', '#checkAvail', function {
+	$('#checkAvail').toggleClass('.hidden')
+})
+
 
 	
