@@ -25,6 +25,7 @@ var rentalPrice = 0
 // }
 
 function getQuote(form) {
+	// Find Rental Rate
 	rentalPrice = 0;
 	var fullDate = new Date(form.checkIn.value.substring(0,4), form.checkIn.value.substring(5,7)-1, form.checkIn.value.substring(8,10));
 	// console.log(form.checkIn.value.substring(0,4));
@@ -42,7 +43,10 @@ function getQuote(form) {
 	// console.log(firstDay);
 	// console.log(typeof(firstDay));
 	for(i = firstDay; i <= numDays+firstDay-1; i++) {
-		if(i != 0 && i % 6 === 0 || i % 5 === 0) {
+		if(i === 0) {
+			rentalPrice = rentalPrice +1
+		}
+		else if(i % 6 === 0 || i % 5 === 0) {
 			rentalPrice = rentalPrice + 10
 			// console.log(rentalPrice)
 		}
@@ -52,7 +56,11 @@ function getQuote(form) {
 		}
 		console.log("Rental Price is " + rentalPrice);
 	}
-	var fullPrice = (rentalPrice + 125)*1.15;
+	// Find Extra Guests
+	var extraGuests = form.numGuests.value;
+	console.log(extraGuests);
+
+	var fullPrice = rentalPrice + 125 + ((extraGuests)*20);
 	console.log("The full price is $" + fullPrice.toFixed(2));
 	$('.button').after('<p>The full price is $' + fullPrice.toFixed(2) + '</p>');
 	
