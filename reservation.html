@@ -25,9 +25,10 @@
 			    <input type="text" name="lastName" value="Last Name">
 			    <br>
 			    Check in: <input type='date' name='checkIn'>
+			    Check Out: <input type='date' name='checkOut'>
 			    Number of Nights: <input type='text' name='stayLength'>
 			    Number of Guests 
-			      <select>
+			      <select name="numGuests">
 			        <option>1</option>
 			        <option>2</option>
 			        <option>3</option>
@@ -43,17 +44,10 @@
 			      </select>  
 			    <br>
 			    <input type='text' name='email' value="email address">
-				<input type="button" name="button" value="Click" onClick="testResults(this.form)">
+				<input type="button" name="button" value="Click" onClick="getQuote(this.form)">
 			  </form> 
 			</div>
-		<script type="text/javascript">
-			function testResults (form) {
-			var fullDate = new Date(form.checkIn.value);
-			console.log(fullDate);
-			var d = fullDate.getDay();
-			console.log(d);
-			}
-		</script>	
+
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/foundation/js/foundation.min.js"></script>
