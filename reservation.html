@@ -19,17 +19,17 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Calendar -->
-		    <div id='calendar' class='hidden'>
+<!-- 		    <div id='calendar' class='hidden'>
 		      <iframe src="https://www.google.com/calendar/embed?src=kgooehkq55u8f63f9mdn24r48g%40group.calendar.google.com&ctz=America/Chicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" class='calendar'></iframe>
-		    </div>
+		    </div> -->
         <!-- Reservation Form -->
 			<div class='reservationForm'>
 			  <form>
-			    First Name: <input type="text" name="firstName"><br>
-			    Last Name: <input type="text" name="lastName">
+			    <input type="text" name="firstName" value="First Name">
+			    <input type="text" name="lastName" value="Last Name">
 			    <br>
 			    Check in: <input type='date' name='checkIn'>
-			    Check out: <input type='date' name='checkOut'>
+			    Number of Nights: <input type='text' name='stayLength'>
 			    Number of Guests 
 			      <select>
 			        <option>1</option>
@@ -46,14 +46,16 @@
 			        <option>12</option>
 			      </select>  
 			    <br>
-			    Tell us about yourself... <input type='text' name='otherInfo'>
+			    <input type='text' name='email' value="email address">
 				<input type="button" name="button" value="Click" onClick="testResults(this.form)">
 			  </form> 
 			</div>
 		<script type="text/javascript">
 			function testResults (form) {
-			var TestVar = Math.abs(form.checkIn.value - form.checkOut.value);
-			alert ("You typed: " + TestVar);
+			var fullDate = new Date(form.checkIn.value);
+			console.log(fullDate);
+			var d = fullDate.getDay();
+			console.log(d);
 			}
 		</script>	
 
