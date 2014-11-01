@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <title>Reservations</title>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+=======
+    <title>Foundation</title>
+>>>>>>> parent of fe42236... Making Calendar and Form more Responsive
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
     <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
@@ -31,24 +35,29 @@ $(document).ready(function() {
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+<<<<<<< HEAD
 		<div class="wrapper row">
 			<div id='calendar'></div>
         <!-- Calendar -->
 <!-- 		    <div id='calendar' class='small-12 column'>
 		      <iframe src="https://www.google.com/calendar/embed?src=kgooehkq55u8f63f9mdn24r48g%40group.calendar.google.com&ctz=America/Chicago" style="border: 0" width="100%" height="500" frameborder="0" scrolling="no" class='calendar'></iframe>
+=======
+        <!-- Calendar -->
+<!-- 		    <div id='calendar' class='hidden'>
+		      <iframe src="https://www.google.com/calendar/embed?src=kgooehkq55u8f63f9mdn24r48g%40group.calendar.google.com&ctz=America/Chicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" class='calendar'></iframe>
+>>>>>>> parent of fe42236... Making Calendar and Form more Responsive
 		    </div> -->
         <!-- Reservation Form -->
-			<div class='reservationForm small-12 column'>
+			<div class='reservationForm'>
 			  <form>
 			    <input type="text" name="firstName" value="First Name">
 			    <input type="text" name="lastName" value="Last Name">
-			    <input type='text' name='email' value="email address">
 			    <br>
 			    Check in: <input type='date' class='date' value="2014-11-08" name='checkIn'>
 			    Check Out: <input type='date' class='date' value="2014-11-10" name='checkOut'>
 			    <!-- Number of Nights: <input type='text' name='stayLength'> -->
-			    Number of Guests <br>
-			      <select type="select" name="numGuests">
+			    Number of Guests 
+			      <select type="select" name="numGuests">Number of Guests
 			        <option value="0">1</option>
 			        <option value="0">2</option>
 			        <option value="0">3</option>
@@ -63,10 +72,11 @@ $(document).ready(function() {
 			        <option value="8">12</option>
 			      </select>  
 			    <br>
+			    <input type='text' name='email' value="email address">
 				<input type="button" class="button" name="button" value="Click" onClick="getQuote(this.form)">
 			  </form> 
 			</div>
-		</div>
+
 
   	<script src="bower_components/jquery/dist/jquery.min.js"></script>
   	<script src="bower_components/foundation/js/foundation.min.js"></script>
