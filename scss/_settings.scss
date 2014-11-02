@@ -235,7 +235,7 @@ $body-bg: red;
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
 // $paragraph-font-size: 1rem;
-// $paragraph-line-height: 1.6;
+$paragraph-line-height: .95;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
@@ -1447,3 +1447,30 @@ $body-bg: red;
 input.date {
 	width: 20%;
 }
+
+button.reservation {
+	width: 100%;
+}
+.reservationWrap {
+	width: 80%;
+	float: left;
+
+}
+.spacer {
+	width: 10%;
+	height: 900px;
+	float: left;
+}
+.reservation {
+	margin-top: 10px;
+}
+
+h3 {
+	text-align: center;
+
+}
+p {
+	text-align: center;
+
+}
+
