@@ -1451,6 +1451,10 @@ input.date {
 button.reservation {
 	width: 100%;
 }
+
+button.quote {
+	width: 100%;
+}
 .reservationWrap {
 	width: 80%;
 	float: left;
@@ -1471,6 +1475,21 @@ h3 {
 }
 p {
 	text-align: center;
+	vertical-align: middle;
 
+}
+ul {
+	list-style-type: none;
+}
+.icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.address {
+	border: 5px solid black;
+	background: blue;
+	vertical-align: middle;
 }
 
