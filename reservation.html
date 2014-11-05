@@ -22,24 +22,24 @@
 
 
         <!-- Reservation Form -->
-        <div class="reservationWrap small-12 medium-6 column">
-			<div class='reservationForm row'>
-			  <form>
-			  	<div class='personalInfo column small-12'>
-				    <input type="text" name="firstName" value="First Name">
-				    <input type="text" name="lastName" value="Last Name">
-				    <input type='text' name='email' value="email address">
-			    <div class='row'>
-				    </div>
-				    	<div class="dates column medium-4 small-6">
-						    Check in: <input type='text' class='date' value="mm/dd/yyyy"  id='datePicker1' name='checkIn'>
-				    	</div>
-				    	<div class="dates column medium-4 small-6">
-						    Check Out: <input type='text' class='date' value="mm/dd/yyyy" id='datePicker2' name='checkOut'>
-				    	</div>
+        <div class='reservationForm row'>
+        	<div class="reservationWrap small-12 medium-6 column">
+				<form>
+				  	<div class='personalInfo column small-12'>
+					    <input type="text" name="firstName" value="First Name">
+					    <input type="text" name="lastName" value="Last Name">
+					    <input type='text' name='email' value="email address">
+				    
+					</div>
+			    	<div class="dates column medium-4 small-6">
+					    Check in <input type='text' class='date' value="mm/dd/yyyy"  id='datePicker1' name='checkIn'>
+			    	</div>
+			    	<div class="dates column medium-4 small-6">
+					    Check out <input type='text' class='date' value="mm/dd/yyyy" id='datePicker2' name='checkOut'>
+			    	</div>
 				    <!-- Number of Nights: <input type='text' name='stayLength'> -->
 				    <div class="dates column medium-4 small-12">
-					    Number of Guests 
+					    Guests 
 					      <select type="select" name="numGuests">Number of Guests
 					        <option value="0">1</option>
 					        <option value="0">2</option>
@@ -56,8 +56,7 @@
 					      </select>  
 				     </div> 
 					<input type="button" class="button quote" name="button" value="Get a Quote" onClick="getQuote(this.form)">
-				
-			  </form> 
+			  	</form> 
 			</div>
 		</div>
 
