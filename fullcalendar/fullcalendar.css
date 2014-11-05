@@ -30,6 +30,7 @@ body .fc { /* extra precedence to overcome jqui */
 .fc-unthemed .fc-row,
 .fc-unthemed .fc-popover {
 	border-color: #ddd;
+	background-color: white;
 }
 
 .fc-unthemed .fc-popover {
@@ -64,7 +65,7 @@ body .fc { /* extra precedence to overcome jqui */
 	font-size: 2em;
 	line-height: .5em;
 	height: .5em; /* will make the total height 1em */
-	font-family: "Courier New", Courier, monospace;
+	font-family: "Helvetica", Courier, monospace;
 }
 
 .fc-icon-left-single-arrow:after {
@@ -104,8 +105,9 @@ body .fc { /* extra precedence to overcome jqui */
 	height: 2.1em;
 	padding: 0 .6em;
 
+
 	/* text & cursor */
-	font-size: 1em; /* normalize */
+	font-size: .6em; /* normalize */
 	white-space: nowrap;
 	cursor: pointer;
 }
@@ -203,7 +205,7 @@ previous button's border...
 
 .fc .fc-button-group > * { /* extra precedence b/c buttons have margin set to zero */
 	float: left;
-	margin: 0 0 0 -1px;
+	margin: 10px 0 0 -1px;
 }
 
 .fc .fc-button-group > :first-child { /* same */
@@ -303,6 +305,7 @@ previous button's border...
 	border-collapse: collapse;
 	border-spacing: 0;
 	font-size: 1em; /* normalize cross-browser */
+	margin-bottom: .5rem;
 }
 
 .fc th {
@@ -369,7 +372,7 @@ previous button's border...
 }
 
 .fc-row .fc-highlight-skeleton td {
-	border-color: transparent;
+	/*border-color: transparent;*/
 }
 
 /*
@@ -391,7 +394,7 @@ temporary rendered events).
 .fc-row .fc-helper-skeleton td {
 	/* see-through to the background below */
 	background: none; /* in case <td>s are globally styled */
-	border-color: transparent;
+	/*border-color: transparent;*/
 
 	/* don't put a border between events and/or the day number */
 	border-bottom: 0;
@@ -456,6 +459,7 @@ be a descendant of the grid when it is being dragged.
 .fc-day-grid-event {
 	margin: 1px 2px 0; /* spacing between events and edges */
 	padding: 0 1px;
+	background-color: white;
 }
 
 /* events that are continuing to/from another week. kill rounded corners and butt up against edge */
@@ -547,7 +551,9 @@ a.fc-more:hover {
 
 .fc-toolbar {
 	text-align: center;
-	margin-bottom: 1em;
+	background-color: white;
+	margin-top: 1em;
+
 }
 
 .fc-toolbar .fc-left {
@@ -657,6 +663,10 @@ a.fc-more:hover {
 .fc-basic-view .fc-week-number,
 .fc-basic-view .fc-day-number {
 	padding: 0 2px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	background-color: white;
 }
 
 .fc-basic-view td.fc-week-number span,
@@ -930,4 +940,8 @@ be a descendant of the grid when it is being dragged.
 
 .fc-time-grid-event .fc-resizer:after {
 	content: "=";
+}
+
+.fc-widget-header {
+	background-color: gray;
 }
