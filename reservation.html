@@ -3,14 +3,75 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <title>Reservations</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
 	<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+	
+
+  </head>
+    <body>
+
+    	
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+	
+			<div id='calendar' class='small-12 column medium-6'></div>
+
+
+        <!-- Reservation Form -->
+        <div class="reservationWrap small-12 medium-6 column">
+			<div class='reservationForm row'>
+			  <form>
+			  	<div class='personalInfo column small-12'>
+				    <input type="text" name="firstName" value="First Name">
+				    <input type="text" name="lastName" value="Last Name">
+				    <input type='text' name='email' value="email address">
+			    <div class='row'>
+				    </div>
+				    	<div class="dates column medium-4 small-6">
+						    Check in: <input type='text' class='date' value="mm/dd/yyyy"  id='datePicker1' name='checkIn'>
+				    	</div>
+				    	<div class="dates column medium-4 small-6">
+						    Check Out: <input type='text' class='date' value="mm/dd/yyyy" id='datePicker2' name='checkOut'>
+				    	</div>
+				    <!-- Number of Nights: <input type='text' name='stayLength'> -->
+				    <div class="dates column medium-4 small-12">
+					    Number of Guests 
+					      <select type="select" name="numGuests">Number of Guests
+					        <option value="0">1</option>
+					        <option value="0">2</option>
+					        <option value="0">3</option>
+					        <option value="0">4</option>
+					        <option value="1">5</option>
+					        <option value="2">6</option>
+					        <option value="3">7</option>
+					        <option value="4">8</option>
+					        <option value="5">9</option>
+					        <option value="6">10</option>
+					        <option value="7">11</option>
+					        <option value="8">12</option>
+					      </select>  
+				     </div> 
+					<input type="button" class="button quote" name="button" value="Get a Quote" onClick="getQuote(this.form)">
+				
+			  </form> 
+			</div>
+		</div>
+
+  	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  	<script src="bower_components/foundation/js/foundation.min.js"></script>
+  	<script src="js/app.js"></script>
 	<script src='fullcalendar/lib/jquery-ui.custom.min.js'></script>	
 	<script src='fullcalendar/lib/moment.min.js'></script>
 	<script src='fullcalendar/fullcalendar.js'></script>
+	<script src='js/datepicker.js'></script>
+
+
+
 	<script type="text/javascript">
 
 
@@ -70,56 +131,16 @@
 
 
 	</script>
-	
+	<script type="text/javascript">
+		$(document).on("hover", "#datePicker1", function() {
+		    $("#datePicker1").datepicker({
+		    	autosize: true
+		    });
+		  });
 
-  </head>
-    <body>
-
-    	
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-	
-			<div id='calendar'></div>
-
-		<div class='spacer'></div>
-        <!-- Reservation Form -->
-        <div class="reservationWrap">
-			<div class='reservationForm'>
-			  <form>
-			    <input type="text" name="firstName" value="First Name">
-			    <input type="text" name="lastName" value="Last Name">
-			    <input type='text' name='email' value="email address">
-			    <br>
-			    Check in: <input type='date' class='date' value="2014-11-08" name='checkIn'>
-			    Check Out: <input type='date' class='date' value="2014-11-10" name='checkOut'>
-			    <!-- Number of Nights: <input type='text' name='stayLength'> -->
-			    Number of Guests 
-			      <select type="select" name="numGuests">Number of Guests
-			        <option value="0">1</option>
-			        <option value="0">2</option>
-			        <option value="0">3</option>
-			        <option value="0">4</option>
-			        <option value="1">5</option>
-			        <option value="2">6</option>
-			        <option value="3">7</option>
-			        <option value="4">8</option>
-			        <option value="5">9</option>
-			        <option value="6">10</option>
-			        <option value="7">11</option>
-			        <option value="8">12</option>
-			      </select>  
-			    <br>
-				<input type="button" class="button quote" name="button" value="Get a Quote" onClick="getQuote(this.form)">
-			  </form> 
-			</div>
-		</div>
-  	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-  	<script src="bower_components/foundation/js/foundation.min.js"></script>
-  	<script src="js/app.js"></script>
-  	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+		$(function() {
+		    $( "#datePicker2" ).datepicker();
+		  });
+	</script>
     </body>
 </html>
