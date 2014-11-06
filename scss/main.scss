@@ -76,9 +76,65 @@ table tr td th {
 
 h2 {
 	font-size: 1.5em;
+	color: white;
 }
 .quoteWrapper {
-	height: 100px;
-	border: 5px solid black;
+	height: 75px;
+	border: 2px solid #DE2429;
 	margin-bottom: 50px;
+	background-color: white;
+	text-align: center;
+	vertical-align: middle;
+}
+
+body {
+	background-color: #0099B5;
+}
+
+.quote {
+	background-color: #DE2429;
+}
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+	background-color: #DE2429;
+
+}
+
+
+.top-bar-section li a:hover {	
+	background-color: #990000 !important;
+}
+
+button:hover, .button:hover {	
+	background-color: #990000 !important;
+}
+.date {
+	min-width: 100px;
+	font-size: 10em;
+}
+
+select {
+	min-width: 75px;
+} 
+.fc-next-button, .fc-prev-button {
+	height: 39px !important;
+	background-color: #333333 !important;
+	background-image: none !important;
+	border-radius: 0px !important;
+	box-shadow: none !important;
+}
+
+.fc-icon {
+	color: white !important;
+}
+
+.fc-today {
+	background-color: #F0F0F0 !important;
+}
+
+.fc-day-number {
+	font-weight: normal !important;
+	text-align: left !important;
+}
+.fc-toolbar {
+	background-color: #1D2276 !important;
 }

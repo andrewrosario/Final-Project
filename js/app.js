@@ -65,7 +65,7 @@ function getQuote(form) {
 	// console.log(form.checkOut.value);
 	var fullPrice = rentalPrice + 125 + ((extraGuests)*20);
 	// console.log("The full price is $" + fullPrice.toFixed(2));
-	$('.button').after('<div class="quoteWrapper"><p>The full price is $' + fullPrice.toFixed(2) + '</p></div>');
+	$('.button').after('<div class="quoteWrapper"><h2>The full price is $' + fullPrice.toFixed(2) + '</h2></div>');
 	
 }
 

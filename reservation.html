@@ -11,12 +11,38 @@
 
   </head>
     <body>
+    	<nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                  <li class="name">
+                    <h1><a href="#">Casa Moderna Vacation Home</a></h1>
+                  </li>
+                   <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                  <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
 
+    		<section class="top-bar-section">
+        <!-- Right Nav Section -->
+            <ul class="right">
+                  <li class="active"><a href="index.html" class="navButton">Home</a></li>
+                  <li class="active"><a href="#" class="navButton">Travel Guide</a></li>
+
+
+<!--                   <li class="has-dropdown">
+                    <a href="#">Right Button Dropdown</a>
+                        <ul class="dropdown">
+                          <li><a href="#">First link in dropdown</a></li>
+                          <li class="active"><a href="#">Active link in dropdown</a></li>
+                        </ul>
+                  </li> -->
+            </ul>
+
+        <!-- Left Nav Section -->
     	
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+            </section>
+    	</nav>
 	
 			<div id='calendar' class='small-12 column medium-6'></div>
 
@@ -32,10 +58,10 @@
 				    
 					</div>
 			    	<div class="dates column medium-4 small-6">
-					    Check in <input type='text' class='date' value="mm/dd/yyyy"  id='datePicker1' name='checkIn'>
+					    Arrive <input type='text' class='date' value="mm/dd/yyyy"  id='datePicker1' name='checkIn'>
 			    	</div>
 			    	<div class="dates column medium-4 small-6">
-					    Check out <input type='text' class='date' value="mm/dd/yyyy" id='datePicker2' name='checkOut'>
+					    Depart<input type='text' class='date' value="mm/dd/yyyy" id='datePicker2' name='checkOut'>
 			    	</div>
 				    <!-- Number of Nights: <input type='text' name='stayLength'> -->
 				    <div class="dates column medium-4 small-12">
