@@ -65,8 +65,42 @@ function getQuote(form) {
 	// console.log(form.checkOut.value);
 	var fullPrice = rentalPrice + 125 + ((extraGuests)*20);
 	// console.log("The full price is $" + fullPrice.toFixed(2));
-	$('.button').after('<div class="quoteWrapper"><h2>The full price is $' + fullPrice.toFixed(2) + '</h2></div>');
 	
-}
+	if(form.firstName.value === "First Name" || form.lastName.value === "Last Name" || form.email.value === "email address")
+	{
+		$('.button').after('<div class="quoteWrapper"><h2>Please provide your full name and email address</h2></div>')
+	}
+	else if (form.checkIn.value === "mm/dd/yyyy" || form.checkOut.value === "mm/dd/yyyy"){
+		$('.button').after('<div class="quoteWrapper"><h2>Please provide an arrival and departure date.</h2></div>')
+	}
+	else if (numDays < 0) {
+		$('.button').after('<div class="quoteWrapper"><h2>Make sure your arrival date is before your departure date.</h2></div>')
+	}
+	else {
+		$('.button').after('<div class="quoteWrapper"><h2>The full price is $' + fullPrice.toFixed(2) + '</h2></div>');
+	}
+};
 
+$(document).on('focus', 'input', function(){
+	console.log("click");
+	$(this).removeAttr('value');
+});
+
+$(document).on('blur', 'input', function(){
+	// console.log("blug");
+	// console.log(this.name);
+	if(this.name === "firstName") {
+		$(this).attr('value', 'First Name')
+	}
+	else if(this.name === 'lastName') {
+		$(this).attr('value', 'Last Name')
+	}
+	else if(this.name === 'email') {
+		$(this).attr('value', 'email address')
+	}
+	else {
+		$(this).attr('value', 'mm/dd/yyyy')
+	};
+	
+});
 
