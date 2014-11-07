@@ -61,6 +61,19 @@ ul {
 	width: 100%;
 }
 
+.ui-datepicker {
+	position: absolute;
+	top: 0px;
+	font-size: .7em !important;
+	text-align: center !important;
+
+}
+.ui-datepicker table tbody tr td  {
+	padding: 1px !important;
+	font-size: .5em !important;
+}
+
+
 .ui-datepicker-title {
 	text-align: center;
 	background: white;
