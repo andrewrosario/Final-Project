@@ -5166,8 +5166,8 @@ $.extend(DayGrid.prototype, {
 		}
 
 		titleHtml =
-			'<span class="fc-title">' +
-				(htmlEscape(event.title || '') || '&nbsp;') + // we always want one line of height
+			'<span class="fc-title">' + "Occupied" +
+				// (htmlEscape(event.title || '') || '&nbsp;') + // we always want one line of height
 			'</span>';
 		
 		return '<a class="' + classes.join(' ') + '"' +

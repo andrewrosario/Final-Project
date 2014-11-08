@@ -68,39 +68,45 @@ function getQuote(form) {
 	
 	if(form.firstName.value === "First Name" || form.lastName.value === "Last Name" || form.email.value === "email address")
 	{
-		$('.button').after('<div class="quoteWrapper"><h2>Please provide your full name and email address</h2></div>')
+		$('.button').before('<div class="quoteWrapper small-12 large-12 column"><h3>Please provide your full name and email address</h3></div>').slideDown()
 	}
 	else if (form.checkIn.value === "mm/dd/yyyy" || form.checkOut.value === "mm/dd/yyyy"){
-		$('.button').after('<div class="quoteWrapper"><h2>Please provide an arrival and departure date.</h2></div>')
+		$('.button').before('<div class="quoteWrapper small-12 large-12 column"><h3>Please provide an arrival and departure date.</h3></div>')
 	}
 	else if (numDays < 0) {
-		$('.button').after('<div class="quoteWrapper"><h2>Make sure your arrival date is before your departure date.</h2></div>')
+		$('.button').before('<div class="quoteWrapper small-12 large-12 column"><h3>Make sure your arrival date is before your departure date.</h3></div>')
 	}
 	else {
-		$('.button').after('<div class="quoteWrapper"><h2>The full price is $' + fullPrice.toFixed(2) + '</h2></div>');
+		$('.button').before('<div class="quoteWrapper small-12 large-12 column"><h3>Your request has been sent. <br> The estimated price is $' + fullPrice.toFixed(2) + '</h3></div>');
 	}
 };
 
-$(document).on('focus', 'input', function(){
+$(document).on('focus', '.blur', function(){
 	console.log("click");
 	$(this).removeAttr('value');
 });
 
-$(document).on('blur', 'input', function(){
+$(document).on('blur', '.blur', function(){
 	// console.log("blug");
 	// console.log(this.name);
-	if(this.name === "firstName") {
-		$(this).attr('value', 'First Name')
-	}
-	else if(this.name === 'lastName') {
-		$(this).attr('value', 'Last Name')
-	}
-	else if(this.name === 'email') {
-		$(this).attr('value', 'email address')
-	}
-	else {
-		$(this).attr('value', 'mm/dd/yyyy')
+	if(this.value === "") {
+		if(this.name === "firstName") {
+			$(this).attr('value', 'First Name')
+		}
+		else if(this.name === 'lastName') {
+			$(this).attr('value', 'Last Name')
+		}
+		else if(this.name === 'email') {
+			$(this).attr('value', 'email address')
+		}
+		else if(this.name === 'checkIn' || this.name === 'checkOut') {
+			$(this).attr('value', 'mm/dd/yyyy')
+		}
+		else {
+			$(this).attr('value', 'Get a Quote')
+		};
+
 	};
-	
+
 });
 

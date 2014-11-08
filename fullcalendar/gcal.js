@@ -72,7 +72,7 @@ function transformOptions(sourceOptions, start, end, timezone) {
 						title: entry.title.$t,
 						start: entry.gd$when[0].startTime,
 						end: entry.gd$when[0].endTime,
-						url: url,
+						// url: url,
 						location: entry.gd$where[0].valueString,
 						description: entry.content.$t
 					});
