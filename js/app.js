@@ -77,7 +77,8 @@ function getQuote(form) {
 		$('.button').before('<div class="quoteWrapper small-12 large-12 column"><h3>Make sure your arrival date is before your departure date.</h3></div>')
 	}
 	else {
-		$('.button').before('<div class="quoteWrapper small-12 large-12 column"><h3>Your request has been sent. <br> The estimated price is $' + fullPrice.toFixed(2) + '</h3></div>');
+		$('.button').before('<div class="quoteWrapper small-12 large-12 column"><h3>Your request has been sent. <br> The estimated price is $' + fullPrice.toFixed(2) + '</h3></div>')
+		$('#quoteForm').submit()
 	}
 };
 

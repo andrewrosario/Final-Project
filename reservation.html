@@ -43,15 +43,15 @@
         <![endif]-->
             </section>
     	</nav>
-		<h3>Availability</h3>	
 		
-		<div id='calendar' class='small-12 column large-6'></div>
-		
-
         <!-- Reservation Form -->
         <div class='reservationForm row'>
+        	<div class='calendarWrapper small-12 large-6 column'>
+	        	<h3 class='avail'>Availability</h3>
+				<div id='calendar'></div>
+			</div>	
         	<div class="reservationWrap small-12 large-6 column">
-				<form>
+				<form id='quoteForm' action="send_form_email.php">
 				  	<div class='personalInfo column small-12'>
 					    <input type="text" class='blur' name="firstName" value="First Name">
 					    <input type="text" class='blur' name="lastName" value="Last Name">
